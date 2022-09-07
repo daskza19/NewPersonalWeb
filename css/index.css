@@ -51,22 +51,24 @@ div.sticky-projects-index ul{
     list-style: none;
 }
 
-div.sticky-projects-index li{
+div.sticky-projects-index li a{
     margin-top: 4px;
 }
 
 a.activesl{
-    color: pink;
+    font-family: lemonMilkItalic;
+    color: royalblue;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     text-align: center;
 }
 
 a.deactivesl{
-    color: white;
+    font-family: lemonMilkItalic;
+    color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     text-align: center;
 }
@@ -80,15 +82,19 @@ div.section-index-div{
 }
 
 img#section-separator-img{
-    margin-left: 24px;
-    width: 28px;
+    position: relative;
+    top: -2px;
+    margin-left: 8px;
+    width: 14px;
     align-self: flex-end;
 }
 
 img.linker-degraded-bar{
+    height: 250px;
     position: relative;
-    left: -17px;
+    left: -9px;
     top: 15px;
+    z-index: -5;
 }
 
 /*BASE SECTION STRUCTURE*/

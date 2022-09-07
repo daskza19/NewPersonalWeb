@@ -2,45 +2,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daskza</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400;700&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="img/web_icon.png" type="image/x-icon">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#header">HEADER</a></li>
-            <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#portfolio">ILLUSTRATIONS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#projects">CONTACT ME</a></li>
-        </ul>
-    </nav>
 
-    <section id="header">
-        <img src="img/new/titles/main_header_title.png" class="header_title">
-        <img src="img/new/Header-Video-2.gif" class="header_video">
-    </section>
 
-    <section id="about-me">
-        <img src="img/new/effects/wave_1.png" class="aboutme-left-image" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="300">
-        <img src="img/new/effects/wave_2.png" class="aboutme-right-image" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="300">
-        <div class= "container-aboutme">
-            <img src="img/new/titles/about_me.png" class="about_me_title" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="300">
-            </div class = "container-items-aboutme">
-                <div class="item-aboutme">
-                    <p class="item-aboutme" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="100">Hello, I am Josep Sànchez Arbona, I'm 21 years old and I like photography, cinema and especially the conceptual art process for video games. During my life I have encountered this question:</p>
+    <div class="container">
+        <section id="header-section">
+            <h1>Page One</h1>
+        </section>
+        <div class="sticky-projects-index"> 
+            <ul>
+                <div class="section-index-div">
+                    <img src="img/linker/normal_indexer.png" id="section-separator-img">
+                    <li><a href="#header-section" class="activesl">HOME</a></li>
                 </div>
-                <img src="img/new/images/about_me_josep.png" class="main-josep-photo">
-                <div class="item-aboutme">
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="100">Hello, I am Josep Sànchez Arbona, I'm 21 years old and I like photography, cinema and especially the conceptual art process for video games. During my life I have encountered this question:</p>
+                <div class="section-index-div">
+                    <img src="img/linker/normal_indexer.png" id="section-separator-img">
+                    <li><a href="#aboutme-section" class="deactivesl">ABOUT ME</a></li>
                 </div>
-            </div>
+                <div class="section-index-div">
+                    <img src="img/linker/normal_indexer.png" id="section-separator-img">
+                    <li><a href="#portfolio-section" class="deactivesl">PORTFOLIO</a></li>
+                </div>
+                <div class="section-index-div">
+                    <img src="img/linker/normal_indexer.png" id="section-separator-img">
+                    <li><a href="#projects-section" class="deactivesl">PROJECTS</a></li>
+                </div>
+                <div class="section-index-div">
+                    <img src="img/linker/normal_indexer.png" id="section-separator-img">
+                    <li><a href="#contact-section" class="deactivesl">CONTACT</a></li>
+                </div>
+            </ul>
+            <img src="img/linker/degraded_bar.png" class="linker-degraded-bar">
         </div>
-    </section>
+        <section id="aboutme-section">
+            <h1>Page Two</h1>
+        </section>
+        <section id="portfolio-section">
+            <h1>Page Three</h1>
+        </section>
+        <section id="projects-section">
+            <h1>Page Four</h1>
+        </section>
+        <section id="contact-section">
+            <h1>Page Five</h1>
+        </section>
+    </div>
 
     <script src='rellax.min.js'></script>
     <script src='index.js'></script>

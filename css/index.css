@@ -133,7 +133,6 @@ section#aboutme-section{
     scroll-snap-align: start;
 }
 section#portfolio-section{
-    background-color: white;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -171,57 +170,69 @@ div.section-port-content{
     width: calc(100% - 150px);
     height: 100%;
     place-items: center;
+    display: flex;
     margin: 0;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-evenly;
 }
 
-div.slide-portfolio{
-    height: 70%;
+div.slide-left-portfolio{
+    height: 40%;
+    width: calc(250px * 18);
     display: flex;
-    animation: scroll 20s linear infinite;
+    animation: scroll-left 40s linear infinite;
+}
+
+div.slide-left-portfolio:hover{
     animation-play-state: paused;
 }
 
-div.slide-portfolio:hover{
-    animation-play-state: paused;
+div.slide-right-portfolio{
+    height: 40%;
+    width: calc(250px * 18);
+    display: flex;
+    animation: scroll-right 40s linear infinite;
+    align-items: flex-end;
 }
 
+div.slide-right-portfolio:hover{
+    animation-play-state: paused;
+}
 
 div.portfolio-image{
     height: 100%;
     width: 250px;
     display: flex;
-    align-items: center;
-    margin-left: -100px;
+    
+    padding: 15px;
     perspective: 100px;
-    transition: margin-right 0.25s;
-}
-
-div.portfolio-image img{
-    height: 100%;
-    transition: transform 0.25s, filter 0.25s;
-    filter: brightness(95%);
-    z-index: -10;
-    border-radius: 10px;
 }
 
 div.portfolio-image:hover{
-    z-index: 400;
-    margin-right: 125px;
+    z-index: 10;
+}
+
+div.portfolio-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.25s, filter 0.25s;
+    filter: brightness(95%);
+    z-index: 1;
+    border-radius: 10px;
 }
 
 div.portfolio-image img:hover{
     transform: translateZ(20px);
     filter: brightness(100%);
+    z-index: 400;
 }
 
 .section-port-content::before,
 .section-port-content::after{
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 0) 100%);
     content: '';
     height: 100%;
     position: absolute;
@@ -235,16 +246,25 @@ div.portfolio-image img:hover{
 }
 
 .section-port-content::after{
-    right: -1px;
+    right: 0;
     top: 0;
     transform: rotateZ(180deg);
 }
 
-@keyframes scroll{
+@keyframes scroll-right{
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-270px*9));
+        transform: translateX(calc(-250px*9));
+    }
+}
+
+@keyframes scroll-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(250px*9));
     }
 }

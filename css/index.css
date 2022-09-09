@@ -6,13 +6,14 @@
 }
 
 html, body {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0;
     background-color: gray;
-    background-image: url(../img/new/background.png);
+    background-image: url(../img/background.png);
     background-size:contain;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
+    overflow-anchor:inherit;
 }
 
 @font-face {
@@ -33,111 +34,63 @@ body::-webkit-scrollbar-thumb{
     background: rgb(158, 158, 158);
 }
 
-section#header-section img{
+nav {
+    position: fixed;
     width: 100%;
-    height: auto;
+    top: 0;
+    left: 40;
     z-index: 10;
-}
-
-/*NAVIGATION THINGS*/
-.sticky-projects-index{
-    width: 180px;
-    height: 0px;
-    position: absolute;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 50%;
     display: flex;
-    align-items: center;
-    float: right;
-    z-index: 5;
+    justify-content: center;
 }
 
-div.sticky-projects-index ul{
-    list-style-type: none;
+nav ul {
     list-style: none;
-}
-
-div.sticky-projects-index li a{
-    margin-top: 4px;
-}
-
-a.activesl{
-    font-family: lemonMilkItalic;
-    color: royalblue;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-}
-
-a.deactivesl{
-    font-family: lemonMilkItalic;
-    color: black;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-}
-
-div.section-index-div{
-    width: 150px;
-    margin-top: 15px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 30px;
 }
 
-img#section-separator-img{
-    position: relative;
-    top: -2px;
-    margin-left: 8px;
-    width: 14px;
-    align-self: flex-end;
-    z-index: 5;
+nav ul li:not(:last-child) {
+    margin-right: 50px;
 }
 
-img.linker-degraded-bar{
-    height: 250px;
-    position: relative;
-    left: -9px;
-    top: 15px;
-    z-index: 4;
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
 }
 
 /*BASE SECTION STRUCTURE*/
 .container{
+    position: absolute;
     width: 100%;
     height: 100%;
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
-
+.container-webkit-scrollbar {
+    display: none;
+}
 section#header-section{
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
     scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    overflow-anchor:inherit;
+    position: relative;
 }
 section#aboutme-section{
-    background-color: blue;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
     scroll-snap-align: start;
 }
 section#portfolio-section{
     display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
     scroll-snap-align: start;
 }
 section#projects-section{
@@ -159,12 +112,6 @@ section#contact-section{
     scroll-snap-align: start;
 }
 
-div.section-ab-content{
-    width: calc(100% - 150px);
-    height: 100%;
-    background-color: aliceblue;
-}
-
 /*BASE SECTION STRUCTURE*/
 div.section-port-content{
     width: calc(100% - 150px);
@@ -176,31 +123,31 @@ div.section-port-content{
     overflow: hidden;
     flex-flow: column;
     justify-content: space-evenly;
+    margin-top: 180px;
 }
-
 div.slide-left-portfolio{
     height: 40%;
     width: calc(250px * 18);
     display: flex;
     animation: scroll-left 40s linear infinite;
+    margin-bottom: 80px;
 }
-
 div.slide-left-portfolio:hover{
     animation-play-state: paused;
 }
-
 div.slide-right-portfolio{
     height: 40%;
     width: calc(250px * 18);
     display: flex;
     animation: scroll-right 40s linear infinite;
     align-items: flex-end;
+    margin-bottom: 80px;
 }
-
 div.slide-right-portfolio:hover{
     animation-play-state: paused;
 }
 
+/*PORTFOLIO SECTION*/
 div.portfolio-image{
     height: 100%;
     width: 250px;
@@ -209,11 +156,9 @@ div.portfolio-image{
     padding: 15px;
     perspective: 100px;
 }
-
 div.portfolio-image:hover{
     z-index: 10;
 }
-
 div.portfolio-image img{
     object-fit: cover;
     height: 100%;
@@ -223,13 +168,11 @@ div.portfolio-image img{
     z-index: 1;
     border-radius: 10px;
 }
-
 div.portfolio-image img:hover{
     transform: translateZ(20px);
     filter: brightness(100%);
     z-index: 400;
 }
-
 .section-port-content::before,
 .section-port-content::after{
     background: linear-gradient(to right, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -239,18 +182,15 @@ div.portfolio-image img:hover{
     width: 10%;
     z-index: 2;
 }
-
 .section-port-content::before{
     left: 0;
     top: 0;
 }
-
 .section-port-content::after{
     right: 0;
     top: 0;
     transform: rotateZ(180deg);
 }
-
 @keyframes scroll-right{
     0%{
         transform: translateX(0);
@@ -259,7 +199,6 @@ div.portfolio-image img:hover{
         transform: translateX(calc(-250px*9));
     }
 }
-
 @keyframes scroll-left{
     0%{
         transform: translateX(0);
@@ -267,4 +206,121 @@ div.portfolio-image img:hover{
     100%{
         transform: translateX(calc(250px*9));
     }
+}
+div#content-images-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    z-index: 15;
+}
+img.inverse-degradade{
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+}
+
+/*HEADER SECTION*/
+img.header-image{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*ABOUT ME SECTION*/
+div.section-ab-content{
+    width: calc(100% - 100px);
+    height: calc(100% - 300px);
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: center;
+    margin-top: 170px;
+    position: relative;
+}
+
+img.first-effect-image{
+    z-index: -50;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    width: 15%;
+}
+
+img.second-effect-image{
+    z-index: -50;
+    position: absolute;
+    top: 150%;
+    left: 0%;
+    width: 20%;
+}
+
+img.section-title{
+    position: absolute;
+    min-width: 650px;
+    width: 50%;
+    z-index: -10;
+    margin-top: 80px;
+}
+
+div.aboutme-firstdiv-text{
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 500px;
+    min-height: 300px;
+    max-height: 700px;
+    width: 35%;
+    height: 45%;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+div.aboutme-secdiv-photo{
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 500px;
+    width: 35%;
+    max-height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+img.ab-josep-photo{
+    width: auto;
+    max-height: 100%;
+}
+
+div.abdiv-social-media{
+    position: absolute;
+    margin-top: 550px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+a.social-media-ablogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.social-media-ablogo img{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+    -webkit-filter: grayscale(100%);
+    transition: -webkit-filter 0.25s;
+}
+
+a.social-media-ablogo img:hover{
+    -webkit-filter: grayscale(0%);
 }

@@ -65,6 +65,7 @@ nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: 800;
+    font-family: madeTommy;
 }
 
 img.section-title{
@@ -107,13 +108,12 @@ section#portfolio-section{
     scroll-snap-align: start;
 }
 section#projects-section{
-    background-color: yellow;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    scroll-snap-align: start;
     width: 100vw;
     height: 100vh;
-    scroll-snap-align: start;
 }
 section#contact-section{
     background-color: purple;
@@ -293,7 +293,7 @@ div.aboutme-thirddiv-skills{
 
 div.global-abskilldiv{
     background-color: rgba(0,0,0, 0.1);
-    border-radius: 20px;
+    border-radius: 10px;
     width: 280px;
     height: 350px;
     margin: 10px;
@@ -381,4 +381,12 @@ div.ab-skills-text{
     width: 90%;
     height: 200px;
     text-align: center;
+}
+
+/*PROJECTS SECTION*/
+div.projects-scroller-div{
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+    align-self: flex-end;
 }

@@ -574,3 +574,55 @@ img.project-r-arrow{
     padding-top: 8px;
     height: 50px;
 }
+
+div.project-content{
+    top: 0;
+    position: absolute;
+    margin-left: calc(100vw*0.5 - var(--width)*0.5);
+    width: 100vw;
+    min-width: 700px;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+div.projects-header-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: calc((100vh - 200px)/4);;
+    max-height: 150px;
+}
+
+div.projects-header-container img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit:contain;
+}
+
+div.project-text{
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    display:inline-block;
+    width: 50%;
+    min-width: 500px;
+}
+
+div.project-text p{
+    padding-top: 10px;
+    padding: 5px, 5px, 5px, 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+iframe{
+    border-radius: 10px;
+}

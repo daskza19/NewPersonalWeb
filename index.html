@@ -10,13 +10,15 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#header-section">HEADER</a></li>
-            <li><a href="#aboutme-section">ABOUT ME</a></li>
-            <li><a href="#portfolio-section">ILLUSTRATIONS</a></li>
-            <li><a href="#projects-section">PROJECTS</a></li>
-            <li><a href="#contact-section">CONTACT ME</a></li>
-        </ul>
+        <div class="nav-effect">
+            <ul>
+                <li><a href="#header-section">HEADER</a></li>
+                <li><a href="#aboutme-section">ABOUT ME</a></li>
+                <li><a href="#portfolio-section">ILLUSTRATIONS</a></li>
+                <li><a href="#projects-section">PROJECTS</a></li>
+                <li><a href="#contact-section">CONTACT ME</a></li>
+            </ul>
+        </div>
     </nav>
 
     <img src="img/effects/effect-01.png" class="first-effect-image">
@@ -241,6 +243,12 @@
         <section id="projects-section">
             <img src="img/titles/header-projects.png" class="section-title">
             <div class="slider">
+                <div id="pass-left-project" onclick="leftProject()">
+                    <img src="img/projects/arrow.png" class="project-l-arrow">
+                </div>
+                <div id="pass-right-project" onclick="rightProject()">
+                    <img src="img/projects/arrow.png" class="project-r-arrow">
+                </div>
                 <div class="slides">
                     <!--Radio Buttons-->
                     <input type="radio" name="radio-btn" id="radio1">
@@ -266,9 +274,6 @@
                         <img src="img/opt_portfolio/07.jpg" class="project-gifbackground">
                     </div>
 
-                    <!--Fim Slide Images-->
-                    
-
                     <!--Navigation Auto-->
                     <div class="navigation-auto">
                         <div class="auto-btn1"></div>
@@ -290,6 +295,7 @@
         </section>
         <section id="contact-section">
             <h1>Page Five</h1>
+
         </section>
 
     <script src='rellax.min.js'></script>

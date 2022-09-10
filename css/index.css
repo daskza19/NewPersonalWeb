@@ -14,6 +14,7 @@ html, body {
     background-size:contain;
     scroll-behavior:smooth;
     overflow-anchor:inherit;
+    align-items: center;
 }
 
 @font-face {
@@ -42,11 +43,22 @@ body::-webkit-scrollbar-thumb{
 nav {
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 40;
-    z-index: 10;
+    height: 50px;
+    z-index: 100;
     display: flex;
     justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+div.nav-effect{
+    width: 750px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(150, 150, 150);
+    border-radius: 10px;
 }
 
 nav ul {
@@ -54,7 +66,8 @@ nav ul {
     display: flex;
     margin-right: 15px;
     margin-left: 15px;
-    margin-top: 30px;
+    justify-content: center;
+    align-self: center;
 }
 
 nav ul li:not(:last-child) {
@@ -63,7 +76,7 @@ nav ul li:not(:last-child) {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: 800;
     font-family: madeTommy;
 }
@@ -116,7 +129,6 @@ section#projects-section{
     height: 100vh;
 }
 section#contact-section{
-    background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,6 +410,7 @@ div.slider{
     height: calc(100% - 150px);
     background-color: aqua;
     align-self: flex-end;
+    overflow: hidden;
 }
 
 div.slides{
@@ -511,4 +524,53 @@ div.manual-navigation{
 
 #radio5:checked ~ .navigation-auto .auto-btn5{
     background-color: azure;
+}
+
+#pass-left-project{
+    left: 20px;
+    margin-top: calc((100vh - 150px)*0.5 - 30px);
+    position: absolute;
+    z-index: 30;
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgb(60, 60, 65);
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#pass-right-project{
+    right: 20px;
+    margin-top: calc((100vh - 150px)*0.5 - 30px);
+    position: absolute;
+    z-index: 30;
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgb(60, 60, 65);
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#pass-left-project:hover{
+    background-color: rgb(93, 93, 97);
+}
+
+#pass-right-project:hover{
+    background-color: rgb(93, 93, 97);
+}
+
+img.project-l-arrow{
+    padding-bottom: 8px;
+    height: 50px;
+    transform: rotateZ(180deg);
+}
+
+img.project-r-arrow{
+    padding-top: 8px;
+    height: 50px;
 }

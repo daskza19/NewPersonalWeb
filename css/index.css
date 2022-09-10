@@ -57,7 +57,7 @@ div.nav-effect{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(210, 210, 210);
     border-radius: 10px;
 }
 
@@ -439,14 +439,14 @@ div.slide img{
 div.manual-navigation{
     position: absolute;
     width: 100%;
-    margin-top: -30px;
+    margin-top: -45px;
     display: flex;
     justify-content: center;
-    z-index: 100;
+    z-index: 30;
 }
 
 .manual-btn{
-    border: 2px solid #fff;
+    border: 2px solid rgb(230, 230, 230);;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -487,7 +487,7 @@ div.manual-navigation{
 }
 
 .navigation-auto div{
-    border: 2px solid white;
+    border: 2px solid rgba(228, 228, 228, 0.1);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -499,7 +499,7 @@ div.manual-navigation{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: calc(100vh - 180px);
+    margin-top: calc(100vh - 195px);
 }
 
 .navigation-auto div:not(:last-child){
@@ -507,72 +507,59 @@ div.manual-navigation{
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: azure;
+    background-color:  rgb(230, 230, 230);;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: azure;
+    background-color:  rgb(230, 230, 230);;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: azure;
+    background-color:  rgb(230, 230, 230);;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: azure;
+    background-color:  rgb(230, 230, 230);;
 }
 
 #radio5:checked ~ .navigation-auto .auto-btn5{
-    background-color: azure;
-}
-
-#pass-left-project{
-    left: 20px;
-    margin-top: calc((100vh - 150px)*0.5 - 30px);
-    position: absolute;
-    z-index: 30;
-    width: 50px;
-    height: 60px;
-    cursor: pointer;
-    background-color: rgb(60, 60, 65);
-    border-radius: 10px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#pass-right-project{
-    right: 20px;
-    margin-top: calc((100vh - 150px)*0.5 - 30px);
-    position: absolute;
-    z-index: 30;
-    width: 50px;
-    height: 60px;
-    cursor: pointer;
-    background-color: rgb(60, 60, 65);
-    border-radius: 10px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#pass-left-project:hover{
-    background-color: rgb(93, 93, 97);
-}
-
-#pass-right-project:hover{
-    background-color: rgb(93, 93, 97);
+    background-color:  rgb(230, 230, 230);;
 }
 
 img.project-l-arrow{
-    padding-bottom: 8px;
-    height: 50px;
-    transform: rotateZ(180deg);
+    left: calc((100vw / 2) - 170px);
+    z-index: 50;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: calc(100vh - 210px);
+    background-color: rgb(230, 230, 230);
 }
 
 img.project-r-arrow{
-    padding-top: 8px;
-    height: 50px;
+    right: calc((100vw / 2) - 170px);
+    z-index: 50;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: calc(100vh - 210px);
+    background-color: rgb(230, 230, 230);
+}
+
+.project-l-arrow:hover{
+    filter: brightness(0.85); 
+}
+
+.project-r-arrow:hover{
+    filter: brightness(0.85); 
 }
 
 div.project-content{
@@ -581,7 +568,7 @@ div.project-content{
     margin-left: calc(100vw*0.5 - var(--width)*0.5);
     width: 100vw;
     min-width: 700px;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 220px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -592,7 +579,6 @@ div.project-content{
 
 div.projects-header-container{
     margin-top: 10px;
-    margin-bottom: 10px;
     width: 50%;
     height: calc((100vh - 200px)/4);;
     max-height: 150px;
@@ -606,6 +592,8 @@ div.projects-header-container img{
 
 div.project-text{
     background-color: rgba(0,0,0, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
     align-items: center;
@@ -625,4 +613,14 @@ div.project-text p{
 
 iframe{
     border-radius: 10px;
+}
+
+div.background-pagesprojects{
+    background-color: pink;
+    position: absolute;
+    width: 100%;
+    margin-top: -500px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
 }

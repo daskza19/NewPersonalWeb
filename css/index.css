@@ -140,21 +140,24 @@ div.section-port-content{
 }
 div.slide-left-portfolio{
     height: 40%;
-    width: calc(250px * 18);
+    width: calc(250px * 27);
     display: flex;
     animation: scroll-left 40s linear infinite;
+    margin-top: 30px;
     margin-bottom: 50px;
+    align-self: flex-end;
 }
+
 div.slide-left-portfolio:hover{
     animation-play-state: paused;
 }
 div.slide-right-portfolio{
     height: 40%;
-    width: calc(250px * 18);
+    width: calc(250px * 27);
     display: flex;
     animation: scroll-right 40s linear infinite;
-    align-items: flex-end;
     margin-bottom: 80px;
+    align-self: flex-start;
 }
 div.slide-right-portfolio:hover{
     animation-play-state: paused;
@@ -165,14 +168,18 @@ div.portfolio-image{
     height: 100%;
     width: 250px;
     display: flex;
-    
     padding: 15px;
     perspective: 100px;
+    align-items: flex-end;
+    justify-content: center;
 }
+
 div.portfolio-image:hover{
     z-index: 10;
 }
+
 div.portfolio-image img{
+    background-color: bisque;
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -181,11 +188,13 @@ div.portfolio-image img{
     z-index: 1;
     border-radius: 10px;
 }
+
 div.portfolio-image img:hover{
     transform: translateZ(20px);
     filter: brightness(100%);
-    z-index: 400;
+    z-index: 15;
 }
+
 @keyframes scroll-right{
     0%{
         transform: translateX(0);

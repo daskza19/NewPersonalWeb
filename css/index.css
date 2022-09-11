@@ -124,17 +124,15 @@ section#projects-section{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    scroll-snap-align: start;
     width: 100vw;
     height: 100vh;
 }
 section#contact-section{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
+    height: 500px;
 }
 
 /*BASE SECTION STRUCTURE*/
@@ -148,7 +146,7 @@ div.section-port-content{
     overflow: hidden;
     flex-flow: column;
     justify-content: space-evenly;
-    margin-top: 150px;
+    margin-top: 110px;
 }
 div.slide-left-portfolio{
     height: 40%;
@@ -259,7 +257,7 @@ div.section-ab-content{
     flex-wrap: wrap;
     display:flex;
     justify-content: center;
-    margin-top: 140px;
+    margin-top: 130px;
     position: relative;
 }
 
@@ -277,6 +275,14 @@ img.second-effect-image{
     top: 150%;
     left: 0%;
     width: 20%;
+}
+
+img.third-effect-image{
+    z-index: -50;
+    position: absolute;
+    right: 0%;
+    width: 40%;
+    align-self: flex-end;
 }
 
 div.aboutme-firstdiv-text{
@@ -408,7 +414,6 @@ div.ab-skills-text{
 div.slider{
     width: 100%;
     height: calc(100% - 150px);
-    background-color: aqua;
     align-self: flex-end;
     overflow: hidden;
 }
@@ -577,17 +582,20 @@ div.project-content{
     overflow: hidden;
 }
 
-div.projects-header-container{
+a.projects-header-container{
     margin-top: 10px;
-    width: 50%;
-    height: calc((100vh - 200px)/4);;
+    margin-bottom: 4px;
+    width: 40%;
+    height: calc((100vh - 200px)/5);;
     max-height: 150px;
+
 }
 
-div.projects-header-container img{
+a.projects-header-container img{
+    border-radius: 10px;
     max-height: 100%;
     max-width: 100%;
-    object-fit:contain;
+    object-fit: contain;
 }
 
 div.project-text{
@@ -604,8 +612,13 @@ div.project-text{
 }
 
 div.project-text p{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+div.project-text p:is(:first-child){
     padding-top: 10px;
-    padding: 5px, 5px, 5px, 0px;
     text-align: center;
     color: #fff;
     font-size: 18px;
@@ -616,11 +629,73 @@ iframe{
 }
 
 div.background-pagesprojects{
-    background-color: pink;
     position: absolute;
     width: 100%;
     margin-top: -500px;
     display: flex;
     justify-content: center;
     z-index: 100;
+}
+a.soulters-pdficon{
+    width: 100px;
+}
+
+a.soulters-pdficon img{
+    border-radius: 10px;
+}
+
+/*CONTACT ME SECTION*/
+div.contactme-globaldiv{
+    width: 60vw;
+    min-width: 700px;
+    height: 140px;
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-bottom: 100px;
+}
+
+div.contact-item{
+    width: 30%;
+    height: 20vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.contact-item img{
+    filter: grayscale(80%);
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+div.contact-item img:hover{
+    filter: grayscale(0%);
+}
+
+div.contact-item p{
+    justify-self: flex-end;
+}
+
+div.final-page-message{
+    width: 550px;
+    height: 40px;
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 8px;
+    position: absolute;
+    align-self: flex-end;
+}
+
+div.final-page-message p{
+    text-align: center;
 }
